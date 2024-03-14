@@ -1,24 +1,31 @@
-import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../api.service';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',
   styleUrls: ['./blog.component.scss']
 })
-export class BlogComponent implements OnInit {
-  posts: any[] = [];
+export class BlogComponent {
+  posts = [
+    {
+      title: 'Blog Post 1',
+      excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      image: 'assets/post1.jpg',
+      slug: 'blog-post-1'
+    },
+    {
+      title: 'Blog Post 2',
+      excerpt: 'Pellentesque eu metus sit amet nulla dignissim cursus.',
+      image: 'assets/post2.jpg',
+      slug: 'blog-post-2'
+    },
+    // Add more blog posts as needed
+  ];
 
-  constructor(private apiService: ApiService) { }
+  constructor(private router: Router) {}
 
-  ngOnInit(): void {
-    this.apiService.getPosts().subscribe(
-      posts => {
-        this.posts = posts;
-      },
-      error => {
-        console.error('Error fetching posts:', error);
-      }
-    );
+  openPost(slug: string) {
+    this.router.navigate(['/blog', slug]);
   }
 }
