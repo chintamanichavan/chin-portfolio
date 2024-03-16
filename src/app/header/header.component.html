@@ -1,12 +1,13 @@
 <header class="header">
-    <div class="container">
-      <nav class="nav">
-        <ul class="nav-list">
-          <li class="nav-item"><a routerLink="/" class="nav-link">Home</a></li>
-          <li class="nav-item"><a routerLink="/projects" class="nav-link">Projects</a></li>
-          <li class="nav-item"><a routerLink="/blog" class="nav-link">Blog</a></li>
-          <li class="nav-item"><a routerLink="/contact" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <div class="container">
+    <nav class="nav">
+      <!-- <a class="logo" (click)="scrollTo('home')">Your Logo</a> -->
+      <ul class="nav-list">
+        <li class="nav-item"><a class="nav-link" (click)="scrollTo('home')">Home</a></li>
+        <li class="nav-item"><a class="nav-link" (click)="scrollTo('projects')">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" (click)="scrollTo('blog')">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" (click)="scrollTo('contact')">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

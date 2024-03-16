@@ -1,0 +1,41 @@
+.footer {
+    background-color: #17B890;
+    padding: 2rem 0;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .social-media {
+    margin-bottom: 1rem;
+  }
+  
+  .social-link {
+    display: inline-flex;
+    align-items: center;
+    color: #333;
+    text-decoration: none;
+    margin: 0 1rem;
+    transition: color 0.3s;
+  
+    &:hover {
+      color: #007bff;
+    }
+  
+    i {
+      font-size: 1.5rem;
+      margin-right: 0.5rem;
+    }
+  
+    span {
+      font-size: 1rem;
+    }
+  }
+  
+  .footer-text {
+    font-size: 0.9rem;
+    color: #666;
+  }

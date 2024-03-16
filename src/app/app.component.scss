@@ -1,3 +1,11 @@
-.main-content {
-    padding-top: 80px; // Adjust the value based on the height of your header
-  }
+.portfolio-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.portfolio-content {
+  flex: 1;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
